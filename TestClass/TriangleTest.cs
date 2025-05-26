@@ -142,5 +142,51 @@ namespace TestClass
             Assert.AreEqual("Scalene triangle", result);
         }
 
+
+        [Test]
+        public void TestTriangleIfHasSidesZeroLength1()
+        {
+            // Arrange
+            int sideA = 0;
+            int sideB = 2;
+            int sideC = 3;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            // Assert
+            Assert.AreEqual("Invalid Triangle - a zero has been detected", result);
+        }
+
+        [Test]
+        public void TestTriangleIfHasSidesZeroLength2()
+        {
+            // Arrange
+            int sideA = 1;
+            int sideB = 0;
+            int sideC = 3;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            // Assert
+            Assert.AreEqual("Invalid Triangle - a zero has been detected", result);
+        }
+
+        [Test]
+        public void TestTriangleIfHasSidesZeroLength3()
+        {
+            // Arrange
+            int sideA = 1;
+            int sideB = 2;
+            int sideC = 0;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            // Assert
+            Assert.AreEqual("Invalid Triangle - a zero has been detected", result);
+        }
+
     }
 }
