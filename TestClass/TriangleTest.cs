@@ -188,5 +188,50 @@ namespace TestClass
             Assert.AreEqual("Invalid Triangle - a zero has been detected", result);
         }
 
+        [Test]
+        public void TestWetherTriangleIsInvalid1()
+        {
+            // Arrange
+            int sideA = 1;
+            int sideB = 2;
+            int sideC = 8;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            // Assert
+            Assert.AreEqual("INVALID!!", result);
+        }
+
+        [Test]
+        public void TestWetherTriangleIsInvalid2()
+        {
+            // Arrange
+            int sideA = 9;
+            int sideB = 4;
+            int sideC = 3;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            // Assert
+            Assert.AreEqual("INVALID!!", result);
+        }
+
+        [Test]
+        public void TestWetherTriangleIsInvalid3()
+        {
+            // Arrange
+            int sideA = 2;
+            int sideB = 7;
+            int sideC = 2;
+
+            // Act
+            string result = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            // Assert
+            Assert.AreEqual("INVALID!!", result);
+        }
+
     }
 }
